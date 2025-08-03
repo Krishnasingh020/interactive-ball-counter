@@ -11,8 +11,8 @@ const resetBtn = document.getElementById("reset");
 
 function IncreaseBallSize(){
     const size = baseSize + count * step;
-    ball.style.width = '${size}px';
-    ball.style.height = '${size}px';
+    ball.style.width = `${size}px`;
+    ball.style.height = `${size}px`;
     counterDisplay.textContent = count;
 }
 
