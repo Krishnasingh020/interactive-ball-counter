@@ -1,20 +1,38 @@
 let count = 0;
+let baseSize =50;
+const step =5;
 
-const countBtn = document.getElementById("counter");
-const incrementBtn = document.getElementById("increament");
-const decrementBtn = document.getElementById("decrement");
+const ball = document.getElementById("ball");
+const counterDisplay = document.getElementById("counter");
+const incrementb = document.getElementById("increment");
+const decrementb = document.getElementById("decrement");
 const resetBtn = document.getElementById("reset");
 
-incrementBtn.addEventListener("click", () => {
+
+function IncreaseBallSize(){
+    const size = baseSize + count * step;
+    ball.style.width = '${size}px';
+    ball.style.height = '${size}px';
+    counterDisplay.textContent = count;
+}
+
+incrementb.addEventListener("click", () => {
     count++;
-    countBtn.textContent = count;
+    IncreaseBallSize();
 });
 
-decrementBtn.addEventListener("click", () => {
-    count--;
-    countBtn.textContent = count;
+decrementb.addEventListener("click", () => {
+    if (count >0 ){
+        count --;
+    IncreaseBallSize();
+    }
 })
 resetBtn.addEventListener("click", () => {
     count = 0;
-    countBtn.textContent = count;
+    IncreaseBallSize();
 })
+
+
+
+
+
