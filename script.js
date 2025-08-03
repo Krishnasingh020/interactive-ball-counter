@@ -27,10 +27,7 @@ function IncreaseBallSize(){
         
         const newColor = GetRandomColor();
         ball.style.backgroundColor = newColor;
-        ball.classList.add("glow-pulse");
-        setTimeout(() => {
-        ball.classList.remove("glow-pulse");
-    }, 600);
+        ball.style.boxShadow = `0 0 20px 6px ${newColor}`;
         
     }
 }
