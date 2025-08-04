@@ -28,7 +28,8 @@ Concepts Practiced
 - JavaScript logic with functions and variables
 
 ---
- How to Run It Locally
+Live link
+https://krishnasingh020.github.io/interactive-ball-counter/
 
 1. Clone the repository:
 
